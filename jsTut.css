@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.main {
+    height: fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+}
+
+.move {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.title {
+    margin: 40px 0 70px 0;
+    font-size: 33px;
+    font-weight: bold;
+
+}
+
+.rock-button {
+    background-color: transparent;
+    border: 3px solid white;
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.rock-button:active {
+    background-color: rgb(0, 0, 0);
+    border: 3px dotted white;
+}
+
+.img1 {
+    width: 50px;
+}
+
+.reset-button {
+    padding: 10px 27px;
+    background-color: white;
+    color: black;
+
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.reset-button:hover {
+    background-color: rgb(188, 188, 188);
+}
+
+.reset-button:active {
+    background-color: rgb(121, 120, 120);
+}
+
+.result {
+    font-weight: bolder;
+    font-size: 35px;
+    margin: 50px 0 30px 0;
+}
+
+.js-score {
+    margin: 60px 0 40px 0;
+    font-size: 20px;
+}
+
+.js-moves {
+    font-size: 19px;
+}
+
+@media only screen and (max-width:480px) {
+    .move {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .rock-button {
+        margin-bottom: 20px;
+    }
+
+}
