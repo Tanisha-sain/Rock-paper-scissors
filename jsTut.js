@@ -8,11 +8,30 @@ if (score === null) {
 }
 
 function updateScoreElement() {
-    document.querySelector('.js-score').innerHTML = `Wins: ${score.win} Losses: ${score.lose} Ties: ${score.tie}`;
+    document.querySelector('.js-score').innerHTML = `Wins: ${score.win}   Losses: ${score.lose}   Ties: ${score.tie}`;
 }
 
 updateScoreElement();
 
+let isAutoPlaying = false;
+let intervalId = '';
+function autoPlay(){
+    if(document.querySelector('.auto-button').innerHTML === 'Auto Play'  || !isAutoPlaying){
+        document.querySelector('.auto-button').innerHTML = 'Stop Play';
+        intervalId = setInterval(function(){
+            const autoPlayer = pickComputerMove();
+            const autoComputer = pickComputerMove();
+            playGame(autoPlayer, autoComputer);
+        },1000);
+        isAutoPlaying = true;
+    }else{
+        document.querySelector('.auto-button').innerHTML = 'Auto Play'; 
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+    }
+    
+
+}
 
 
 
